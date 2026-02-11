@@ -13,18 +13,18 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            line-height: 1.7;
+            color: #2d3748;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
         }
@@ -32,140 +32,182 @@
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 50px 40px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
         }
 
         .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .header p {
-            font-size: 16px;
-            opacity: 0.95;
+            font-size: 32px;
+            margin-bottom: 0;
+            font-weight: 700;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .content {
-            padding: 40px 30px;
+            padding: 50px 40px;
         }
 
         .section {
-            margin-bottom: 35px;
+            margin-bottom: 45px;
         }
 
         .section h2 {
             color: #667eea;
-            font-size: 22px;
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .section h2::before {
             content: '';
-            width: 4px;
-            height: 24px;
-            background: #667eea;
-            border-radius: 2px;
+            width: 5px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            flex-shrink: 0;
         }
 
         .section h3 {
-            color: #555;
-            font-size: 18px;
-            margin-bottom: 12px;
-            margin-top: 20px;
+            color: #4a5568;
+            font-size: 19px;
+            margin-bottom: 14px;
+            margin-top: 24px;
+            font-weight: 600;
         }
 
         .section p {
-            margin-bottom: 15px;
-            color: #555;
+            margin-bottom: 16px;
+            color: #4a5568;
+            font-size: 16px;
         }
 
         .section ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
+            margin-left: 28px;
+            margin-bottom: 18px;
         }
 
         .section li {
-            margin-bottom: 8px;
-            color: #555;
+            margin-bottom: 10px;
+            color: #4a5568;
+            font-size: 16px;
+            padding-left: 8px;
+        }
+
+        .section li::marker {
+            color: #667eea;
+            font-weight: bold;
         }
 
         .highlight-box {
-            background: #f8f9ff;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-left: 5px solid #667eea;
+            padding: 24px 28px;
+            margin: 24px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .highlight-box strong {
+            color: #2d3748;
+            font-size: 17px;
+            line-height: 1.7;
         }
 
         .form-section {
-            background: #f8f9ff;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 30px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .form-section h2 {
             color: #667eea;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            font-size: 26px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 15px;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
+            padding: 14px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
             font-size: 16px;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
+            background: white;
+            font-family: inherit;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-1px);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 80px;
+            min-height: 100px;
+            line-height: 1.6;
         }
 
         .required {
-            color: #e74c3c;
+            color: #e53e3e;
+            font-weight: bold;
         }
 
         .submit-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 14px 40px;
+            padding: 16px 40px;
             border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
             width: 100%;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            letter-spacing: 0.3px;
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
 
         .submit-btn:active {
@@ -179,57 +221,79 @@
         }
 
         .message {
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
             display: none;
+            font-weight: 500;
         }
 
         .message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background: #c6f6d5;
+            color: #22543d;
+            border: 2px solid #9ae6b4;
         }
 
         .message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+            background: #fed7d7;
+            color: #742a2a;
+            border: 2px solid #fc8181;
         }
 
         .contact-info {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 5px solid #f59e0b;
+            padding: 20px 24px;
+            margin: 24px 0 0 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .contact-info strong {
-            color: #856404;
+            color: #78350f;
+            font-size: 16px;
+        }
+
+        .contact-info p {
+            color: #78350f;
+            margin-bottom: 8px;
         }
 
         a {
             color: #667eea;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
 
         a:hover {
+            color: #764ba2;
             text-decoration: underline;
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .header {
+                padding: 40px 25px;
+            }
+
             .header h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
             .content {
-                padding: 30px 20px;
+                padding: 35px 25px;
             }
 
             .form-section {
-                padding: 20px;
+                padding: 30px 25px;
+            }
+
+            .section h2 {
+                font-size: 22px;
             }
         }
 
@@ -251,8 +315,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Support a Member‑Driven Initiative to Update Laparoscopy Descriptors for Fertility Preservation</h1>
-            <p>Ensuring Equitable, Medically Appropriate Care for Patients Who Cannot Freeze Eggs</p>
+            <h1>Support a Member-Driven Initiative to Update Laparoscopy Descriptors for Fertility Preservation</h1>
         </div>
 
         <div class="content">
@@ -271,8 +334,8 @@
             </div>
 
             <div class="section">
-                <h2>WHAT: A <a href="https://www.oma.org/member/your-association/get-involved/committees/physician-payment-committee/?anchor=proposals" target="_blank">Member‑Driven OMA Submission</a> to Modernize Surgical Descriptors</h2>
-                <p>We are preparing a member‑driven submission within the OMA's Reproductive Biology Section to update the gynecologic laparoscopy descriptors to explicitly include:</p>
+                <h2>WHAT: A Member-Driven OMA Submission to Modernize Surgical Descriptors</h2>
+                <p>We are preparing a <a href="https://www.oma.org/member/your-association/get-involved/committees/physician-payment-committee/?anchor=proposals" target="_blank">member driven submission</a> within the OMA's Reproductive Biology Section to update the gynecologic laparoscopy descriptors to explicitly include:</p>
                 <ul>
                     <li><strong>Ovarian tissue harvesting</strong></li>
                     <li><strong>Ovarian tissue transplantation</strong></li>
@@ -282,7 +345,7 @@
                 <h3>This update will:</h3>
                 <ul>
                     <li>Provide clarity for clinicians performing these procedures</li>
-                    <li>Support ethical, patient‑centred care</li>
+                    <li>Support ethical, patient-centred care</li>
                     <li>Ensure billing practices accurately reflect the medical purpose of the surgery</li>
                     <li>Reduce administrative ambiguity for providers and institutions</li>
                 </ul>
@@ -317,18 +380,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="institution">Institution/Practice</label>
-                        <input type="text" id="institution" name="institution">
-                    </div>
-
-                    <div class="form-group">
                         <label for="comments">Additional Comments (Optional)</label>
-                        <textarea id="comments" name="comments" placeholder="Any additional thoughts or support you'd like to share..."></textarea>
+                        <textarea id="comments" name="comments" placeholder="Any additional thoughts you'd like to share..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn" id="submitBtn">
@@ -340,7 +393,6 @@
                     <p><strong>Alternative submission:</strong> You may also send your information directly to:</p>
                     <p>Dr. Jennia Michaeli<br>
                     Email: <a href="mailto:Jennia.Michaeli@sinaihealth.ca">Jennia.Michaeli@sinaihealth.ca</a><br>
-                    Phone: <a href="tel:437-972-4356">437-972-4356</a></p>
                 </div>
             </div>
         </div>
@@ -348,7 +400,7 @@
 
     <script>
         // CONFIGURATION: Replace with your Google Apps Script Web App URL
-        const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwn5VfschzMa9BlwL0SWb_eTgt7VzCfG-zBjAlFmCgluRAYs8bv-RH3bX-nunVePqHAQQ/exec';
         
         const form = document.getElementById('supportForm');
         const submitBtn = document.getElementById('submitBtn');
@@ -385,8 +437,6 @@
                 fullName: document.getElementById('fullName').value.trim(),
                 omaNumber: document.getElementById('omaNumber').value.trim(),
                 email: document.getElementById('email').value.trim(),
-                phone: document.getElementById('phone').value.trim(),
-                institution: document.getElementById('institution').value.trim(),
                 comments: document.getElementById('comments').value.trim()
             };
 
@@ -425,7 +475,7 @@
                 e.target.style.borderColor = '#e74c3c';
             });
             input.addEventListener('input', (e) => {
-                e.target.style.borderColor = '#e0e0e0';
+                e.target.style.borderColor = '#e2e8f0';
             });
         });
     </script>
